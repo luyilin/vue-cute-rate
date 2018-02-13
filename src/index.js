@@ -1,7 +1,7 @@
-import starRate from './star.vue'
+import StarRate from './star.vue'
 
-export default starRate
+export default StarRate
 
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.component(starRate.name, starRate)
+  window.Vue.component(StarRate.name, StarRate)
 }

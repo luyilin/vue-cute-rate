@@ -41,7 +41,16 @@
   "eslintConfig": {
     "extends": [
       "plugin:vue/recommended"
-    ]
+    ],
+    "rules": {
+      "vue/max-attributes-per-line": [2, {
+        "singleline": 2,
+        "multiline": {
+          "max": 2,
+          "allowFirstLine": true
+        }
+      }]
+    }
   },
   "devDependencies": {
     "bili": "^1.3.3",

@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <star-rate />
+    <star-rate :value="3"/>
+    <star-rate :value="2.5" :star-half="true"/>
   </div>
 </template>
 
 <script>
-import starRate from '../src'
+import StarRate from '../src'
 
 export default {
   components: {
-    starRate
+    StarRate
   }
 }
 </script>
