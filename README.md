@@ -20,11 +20,11 @@ CDN: [UNPKG](https://unpkg.com/vue-cute-rate/) | [jsDelivr](https://cdn.jsdelivr
 </template>
 
 <script>
-import starRate from 'vue-cute-rate'
+import StarRate from 'vue-cute-rate'
 
 export default {
   components: {
-    starRate
+    StarRate
   }
 }
 </script>
