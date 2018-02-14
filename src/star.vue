@@ -40,14 +40,14 @@
       return {
         hoverIndex: -1,
         currentValue: this.value,
-        isHalf: this.computeHalf()
+        isHalf: this.starHalf && this.value.toString().split('.').length > 1
       }
     },
 
     methods: {
       computeCls (i) {
         let starHalf = this.starHalf
-        let currentIndex = this.hoverIndex === -1 ? this.currentValue : this.hoverIndex
+        let currentIndex = this.currentIndex()
         return {
           'icon-full': starHalf
             ? i < currentIndex || (i === currentIndex && !this.isHalf)
@@ -56,13 +56,13 @@
       },
       computeHalfCls (i) {
         if (!this.starHalf) return
-        let currentIndex = this.hoverIndex === -1 ? this.currentValue : this.hoverIndex
+        let currentIndex = this.currentIndex()
         return {
           'icon-half': i === Math.ceil(currentIndex) && this.isHalf
         }
       },
-      computeHalf () {
-        return this.starHalf && this.value.toString().split('.').length > 1
+      currentIndex () {
+        return this.hoverIndex === -1 ? this.currentValue : this.hoverIndex
       },
       starMousemove (i) {
         this.isHalf = false
@@ -73,11 +73,11 @@
         this.hoverIndex = i
       },
       starClick (i) {
-        this.currentValue = i
+        this.currentValue = this.isHalf ? i - 0.5 : i
       },
       starMouseleave () {
         this.hoverIndex = -1
-        this.isHalf = this.computeHalf()
+        this.isHalf = this.starHalf && this.currentValue.toString().split('.').length > 1
       }
     }
 
@@ -93,7 +93,7 @@
     text-align: center;
   }
   i {
-    color: #dedede;
+    color: #e9e9e9;
     font-size: 28px;
     transition: all 0.3s ease-in-out;
   }
