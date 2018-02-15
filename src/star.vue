@@ -1,14 +1,15 @@
 <template>
   <div class="star-main" :class="starDisable"
+       ref="cuteRate"
        @mouseleave="starMouseleave">
     <input type="hidden" :value="currentValue">
     <div class="star-full"
          v-for="i in count" :key="i"
          @mousemove="starMousemove(i)"
          @click="starClick(i)">
-      <i class="iconfont icon-star2 icon-rate-1" :class="computeCls(i)" />
+      <i class="iconfont icon-rate-1" :class="computeCls(i)" />
       <span class="star-half" @mousemove.stop="starHalfMousemove(i)">
-        <i class="iconfont icon-star2 icon-rate-2" :class="computeHalfCls(i)" />
+        <i class="iconfont icon-rate-2" :class="computeHalfCls(i)" />
       </span>
     </div>
   </div>
@@ -34,6 +35,14 @@
       disabled: {
         type: Boolean,
         default: false
+      },
+      type: {
+        type: String,
+        default: 'star'
+      },
+      color: {
+        type: String,
+        default: '#fadb14'
       }
     },
 
@@ -51,21 +60,34 @@
       }
     },
 
+    mounted () {
+      const style = this.$refs.cuteRate.style
+      style.setProperty('--color', this.type === 'heart' ? '#d4237a' : this.color)
+    },
+
     methods: {
       computeCls (i) {
         let starHalf = this.starHalf
         let currentIndex = this.currentIndex()
-        return {
-          'icon-full': starHalf
-            ? i < currentIndex || (i === currentIndex && !this.isHalf)
-            : i <= Math.ceil(currentIndex)
-        }
+        const temp = starHalf
+          ? i < currentIndex || (i === currentIndex && !this.isHalf)
+          : i <= Math.ceil(currentIndex)
+        return Object.assign({}, {
+          'icon-full': temp,
+        }, this.computeType(temp))
       },
       computeHalfCls (i) {
         if (!this.starHalf) return
         let currentIndex = this.currentIndex()
-        return {
+        return Object.assign({}, {
           'icon-half': i === Math.ceil(currentIndex) && this.isHalf
+        }, this.computeType())
+      },
+      computeType () {
+        return {
+          'icon-star': this.type === 'star',
+          'icon-star1': this.type === 'star1',
+          'icon-star2': this.type === 'heart'
         }
       },
       currentIndex () {
@@ -105,12 +127,12 @@
   }
   i {
     color: #e9e9e9;
-    font-size: 28px;
+    font-size: 22px;
     transition: all 0.3s ease-in-out;
   }
   .star-disable {
     .star-full {
-      cursor: default;
+      cursor: not-allowed;
       &:hover {
         transform: scale(1);
       }
@@ -138,6 +160,6 @@
     color: transparent;
   }
   .icon-full, .icon-half {
-    color: #d4237a;
+    color: var(--color);
   }
 </style>
