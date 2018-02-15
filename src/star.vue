@@ -1,5 +1,6 @@
 <template>
-  <div class="star-main" @mouseleave="starMouseleave">
+  <div class="star-main" :class="starDisable"
+       @mouseleave="starMouseleave">
     <input type="hidden" :value="currentValue">
     <div class="star-full"
          v-for="i in count" :key="i"
@@ -44,6 +45,12 @@
       }
     },
 
+    computed: {
+      starDisable () {
+        return this.disabled ? 'star-disable' : ''
+      }
+    },
+
     methods: {
       computeCls (i) {
         let starHalf = this.starHalf
@@ -65,17 +72,21 @@
         return this.hoverIndex === -1 ? this.currentValue : this.hoverIndex
       },
       starMousemove (i) {
+        if (this.disabled) return
         this.isHalf = false
         this.hoverIndex = i
       },
       starHalfMousemove (i) {
+        if (this.disabled) return
         this.isHalf = true
         this.hoverIndex = i
       },
       starClick (i) {
+        if (this.disabled) return
         this.currentValue = this.isHalf ? i - 0.5 : i
       },
       starMouseleave () {
+        if (this.disabled) return
         this.hoverIndex = -1
         this.isHalf = this.starHalf && this.currentValue.toString().split('.').length > 1
       }
@@ -97,11 +108,20 @@
     font-size: 28px;
     transition: all 0.3s ease-in-out;
   }
+  .star-disable {
+    .star-full {
+      cursor: default;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
   .star-full {
     position: relative;
     display: inline-block;
     transition: all 0.2s ease;
     margin-right: 8px;
+    cursor: pointer;
     &:hover {
       transform: scale(1.1);
     }

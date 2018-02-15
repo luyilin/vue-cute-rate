@@ -43,7 +43,7 @@
       "plugin:vue/recommended"
     ],
     "rules": {
-      "vue/max-attributes-per-line": [2, {
+      "vue/max-attributes-per-line": [3, {
         "singleline": 2,
         "multiline": {
           "max": 2,
