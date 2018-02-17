@@ -7,9 +7,13 @@
          v-for="i in count" :key="i"
          @mousemove="starMousemove(i)"
          @click="starClick(i)">
-      <i class="iconfont icon-rate-1" :class="computeCls(i)" />
+      <i class="char iconfont icon-rate-1" :class="computeFullTypeCls(i)"
+         v-if="!otherRateChar"/>
+      <slot name="rateChar" :computeClass="computeFullCls(i, 'char')"/>
       <span class="star-half" @mousemove.stop="starHalfMousemove(i)">
-        <i class="iconfont icon-rate-2" :class="computeHalfCls(i)" />
+        <i class="char iconfont icon-rate-2" :class="computeHalfTypeCls(i)"
+           v-if="!otherRateChar"/>
+        <slot name="rateChar" :computeClass="computeHalfCls(i, 'char')"/>
       </span>
     </div>
   </div>
@@ -50,7 +54,8 @@
       return {
         hoverIndex: -1,
         currentValue: this.value,
-        isHalf: this.starHalf && this.value.toString().split('.').length > 1
+        isHalf: this.starHalf && this.value.toString().split('.').length > 1,
+        otherRateChar: false
       }
     },
 
@@ -61,33 +66,43 @@
     },
 
     mounted () {
-      const style = this.$refs.cuteRate.style
-      style.setProperty('--color', this.type === 'heart' ? '#d4237a' : this.color)
+      const cuteRate = this.$refs.cuteRate
+      const style = cuteRate.style
+      style.setProperty('--color', (this.type === 'heart' && this.color === '#fadb14') ? '#d4237a' : this.color)
+      this.otherRateChar = this.$scopedSlots.rateChar
     },
 
     methods: {
-      computeCls (i) {
+      computeFullCls (i, j) {
         let starHalf = this.starHalf
         let currentIndex = this.currentIndex()
         const temp = starHalf
           ? i < currentIndex || (i === currentIndex && !this.isHalf)
           : i <= Math.ceil(currentIndex)
-        return Object.assign({}, {
+        return {
           'icon-full': temp,
-        }, this.computeType(temp))
+          'char': j === 'char'
+        }
       },
-      computeHalfCls (i) {
-        if (!this.starHalf) return
+      computeFullTypeCls (i) {
+        return Object.assign({}, this.computeFullCls(i), this.computeType())
+      },
+      computeHalfCls (i, j) {
+        if (!this.starHalf && j === 'char') return 'icon-rate-2 char'
         let currentIndex = this.currentIndex()
-        return Object.assign({}, {
-          'icon-half': i === Math.ceil(currentIndex) && this.isHalf
-        }, this.computeType())
+        return {
+          'icon-half': i === Math.ceil(currentIndex) && this.isHalf,
+          'icon-rate-2 char': j === 'char'
+        }
+      },
+      computeHalfTypeCls (i) {
+        return Object.assign({}, this.computeHalfCls(i), this.computeType())
       },
       computeType () {
         return {
           'icon-star': this.type === 'star',
           'icon-star1': this.type === 'star1',
-          'icon-star2': this.type === 'heart'
+          'icon-heart': this.type === 'heart'
         }
       },
       currentIndex () {
@@ -120,12 +135,17 @@
 <style scoped lang="scss">
   @import "assets/iconfont.css";
 
-  .star-main {
+  * {
     margin: 0;
+    padding: 0;
+  }
+
+  .star-main {
+    margin: 10px auto;
     padding: 0;
     text-align: center;
   }
-  i {
+  .char {
     color: #e9e9e9;
     font-size: 22px;
     transition: all 0.3s ease-in-out;
