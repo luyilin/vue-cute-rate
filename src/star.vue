@@ -129,11 +129,14 @@
       starClick (i) {
         if (this.disabled) return
         const curValue = this.currentValue
-        this.currentValue = this.isHalf ? i - 0.5 : i
+        let value = this.isHalf ? i - 0.5 : i
+        this.currentValue = value
         if (curValue === this.currentValue && this.allowClear) {
           this.currentValue = 0
           this.hoverIndex = -1
+          value = 0
         }
+        this.$emit('input', value)
       },
       starMouseleave () {
         if (this.disabled) return
@@ -157,6 +160,7 @@
     margin: 10px auto;
     padding: 0;
     text-align: center;
+    display: inline-block;
   }
   .char {
     color: #e9e9e9;

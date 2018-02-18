@@ -15,6 +15,8 @@
          :class="props.computeClass">V</p>
     </star-rate>
     <star-rate :value="4" :allow-clear="false"/>
+    <star-rate v-model="value" type="star1"/>
+    <span class="text">{{value}} stars</span>
   </div>
 </template>
 
@@ -24,9 +26,20 @@ import StarRate from '../src'
 export default {
   components: {
     StarRate
+  },
+
+  data () {
+    return {
+      value: 3
+    }
   }
 }
 </script>
 
 <style>
+  .text {
+    color: #37414a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+  }
 </style>
