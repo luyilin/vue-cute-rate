@@ -2,8 +2,7 @@
   <div id="app">
     <star-rate :value="4"/>
     <star-rate :value="2.5" type="star1"
-               :star-half="true"
-               color="#ffd5e3"/>
+               :star-half="true"/>
     <star-rate :value="2" :disabled="true"
                type="heart"/>
     <star-rate :value="3.5" :star-half="true">
@@ -15,6 +14,7 @@
       <p slot="rateChar" slot-scope="props"
          :class="props.computeClass">V</p>
     </star-rate>
+    <star-rate :value="4" :allow-clear="false"/>
   </div>
 </template>
 

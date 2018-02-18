@@ -47,6 +47,10 @@
       color: {
         type: String,
         default: '#fadb14'
+      },
+      allowClear: {
+        type: Boolean,
+        default: true
       }
     },
 
@@ -110,17 +114,26 @@
       },
       starMousemove (i) {
         if (this.disabled) return
-        this.isHalf = false
+        if (this.starHalf) {
+          this.isHalf = false
+        }
         this.hoverIndex = i
       },
       starHalfMousemove (i) {
         if (this.disabled) return
-        this.isHalf = true
+        if (this.starHalf) {
+          this.isHalf = true
+        }
         this.hoverIndex = i
       },
       starClick (i) {
         if (this.disabled) return
+        const curValue = this.currentValue
         this.currentValue = this.isHalf ? i - 0.5 : i
+        if (curValue === this.currentValue && this.allowClear) {
+          this.currentValue = 0
+          this.hoverIndex = -1
+        }
       },
       starMouseleave () {
         if (this.disabled) return
