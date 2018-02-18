@@ -1,6 +1,7 @@
 <template>
-  <div class="star-main" :class="starDisable"
+  <div class="star-main" :class="classNames(starDisable, className)"
        ref="cuteRate"
+       :style="customStyle"
        @mouseleave="starMouseleave">
     <input type="hidden" :value="currentValue">
     <div class="star-full"
@@ -20,6 +21,8 @@
 </template>
 
 <script>
+  import ClassNames from 'classnames'
+
   export default {
     name: 'StarRate',
 
@@ -51,6 +54,16 @@
       allowClear: {
         type: Boolean,
         default: true
+      },
+      className: {
+        type: String,
+        default: ''
+      },
+      customStyle: {
+        type: Object,
+        default: () => {
+          return {}
+        }
       }
     },
 
@@ -72,7 +85,7 @@
     mounted () {
       const cuteRate = this.$refs.cuteRate
       const style = cuteRate.style
-      style.setProperty('--color', (this.type === 'heart' && this.color === '#fadb14') ? '#d4237a' : this.color)
+      style.setProperty('--color', this.color)
       this.otherRateChar = this.$scopedSlots.rateChar
     },
 
@@ -142,9 +155,11 @@
         if (this.disabled) return
         this.hoverIndex = -1
         this.isHalf = this.starHalf && this.currentValue.toString().split('.').length > 1
+      },
+      classNames (...args) {
+        return ClassNames(...args)
       }
     }
-
   }
 </script>
 
