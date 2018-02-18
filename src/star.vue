@@ -1,7 +1,6 @@
 <template>
-  <div class="star-main" :class="classNames(starDisable, className)"
+  <div class="star-main" :class="starDisable"
        ref="cuteRate"
-       :style="customStyle"
        @mouseleave="starMouseleave">
     <input type="hidden" :value="currentValue">
     <div class="star-full"
@@ -21,8 +20,6 @@
 </template>
 
 <script>
-  import ClassNames from 'classnames'
-
   export default {
     name: 'StarRate',
 
@@ -54,16 +51,6 @@
       allowClear: {
         type: Boolean,
         default: true
-      },
-      className: {
-        type: String,
-        default: ''
-      },
-      customStyle: {
-        type: Object,
-        default: () => {
-          return {}
-        }
       }
     },
 
@@ -155,9 +142,6 @@
         if (this.disabled) return
         this.hoverIndex = -1
         this.isHalf = this.starHalf && this.currentValue.toString().split('.').length > 1
-      },
-      classNames (...args) {
-        return ClassNames(...args)
       }
     }
   }

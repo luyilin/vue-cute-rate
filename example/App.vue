@@ -17,7 +17,7 @@
     <star-rate v-model="value" type="star1"/>
     <span class="text">{{ value }} stars</span>
     <star-rate :value="5"
-               class-name="rate-1" :custom-style="{'margin': 20 + 'px'}"/>
+               class="rate-1" :style="{'margin': 20 + 'px'}"/>
   </div>
 </template>
 
