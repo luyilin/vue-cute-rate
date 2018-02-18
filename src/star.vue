@@ -44,14 +44,22 @@
         type: String,
         default: 'star'
       },
-      color: {
-        type: String,
-        default: '#fadb14'
-      },
       allowClear: {
         type: Boolean,
         default: true
-      }
+      },
+      activeColor: {
+        type: String,
+        default: '#fadb14'
+      },
+      inactiveColor: {
+        type: String,
+        default: '#e9e9e9'
+      },
+      hoverColor: {
+        type: String,
+        default: ''
+      },
     },
 
     data () {
@@ -65,14 +73,15 @@
 
     computed: {
       starDisable () {
-        return this.disabled ? 'star-disable' : ''
+        return this.disabled ? 'star-disable' : 'star-able'
       }
     },
 
     mounted () {
-      const cuteRate = this.$refs.cuteRate
-      const style = cuteRate.style
-      style.setProperty('--color', this.color)
+      const style = this.$refs.cuteRate.style
+      style.setProperty('--active-color', this.activeColor)
+      style.setProperty('--inactive-color', this.inactiveColor)
+      style.setProperty('--hover-color', this.hoverColor || this.activeColor)
       this.otherRateChar = this.$scopedSlots.rateChar
     },
 
@@ -162,7 +171,7 @@
     display: inline-block;
   }
   .char {
-    color: #e9e9e9;
+    color: var(--inactive-color);
     font-size: 22px;
     transition: all 0.3s ease-in-out;
   }
@@ -180,8 +189,15 @@
     transition: all 0.2s ease;
     margin-right: 8px;
     cursor: pointer;
-    &:hover {
-      transform: scale(1.1);
+  }
+  .star-able {
+    .star-full {
+      &:hover {
+        transform: scale(1.1);
+        .icon-full, .icon-half {
+          color: var(--hover-color)
+        }
+      }
     }
   }
   .star-half {
@@ -196,6 +212,6 @@
     color: transparent;
   }
   .icon-full, .icon-half {
-    color: var(--color);
+    color: var(--active-color);
   }
 </style>

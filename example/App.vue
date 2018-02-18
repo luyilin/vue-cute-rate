@@ -4,20 +4,21 @@
     <star-rate :value="2.5" type="star1"
                :star-half="true"/>
     <star-rate :value="2" :disabled="true"
-               color="#d4237a"
+               active-color="#d4237a"
                type="heart"/>
     <star-rate :value="3.5" :star-half="true">
       <i class="iconfont icon-vip icon-slot"
          slot="rateChar" slot-scope="props" :class="props.computeClass"/>
     </star-rate>
-    <star-rate color="#42b983" :value="1">
+    <star-rate active-color="#42b983" :value="1">
       <span slot="rateChar" slot-scope="props" :class="props.computeClass">V</span>
     </star-rate>
     <star-rate :value="4" :allow-clear="false"/>
     <star-rate v-model="value" type="star1"/>
     <span class="text">{{ value }} stars</span>
-    <star-rate :value="5"
-               class="rate-1" :style="{'margin': 20 + 'px'}"/>
+    <star-rate :value="3"
+               class="rate-1" :style="{'margin': 20 + 'px'}"
+               inactive-color="#ccc" hover-color="lightblue"/>
   </div>
 </template>
 
