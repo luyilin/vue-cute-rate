@@ -35,7 +35,7 @@
            class="dog"
            src="https://user-images.githubusercontent.com/12069729/36364686-84f49ada-1580-11e8-9bc9-4549c5d066d3.png">
     </star-rate>
-    <span class="text">{{ dogValue + (dogValue > 1 ? ' dogs' : ' dog') }}</span>
+    <span class="text">{{ dogValue + ' lovely' + (dogValue > 1 ? ' puppies' : ' puppy') }}</span>
   </div>
 </template>
 
@@ -69,6 +69,5 @@ export default {
   }
   .dog {
     width: 20px;
-    transition: all 0.3s ease-in-out;
   }
 </style>
