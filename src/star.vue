@@ -76,6 +76,10 @@
       inactiveChar: {
         type: String,
         default: ''
+      },
+      hoverChange: {
+        type: Boolean,
+        default: false
       }
     },
 
@@ -144,6 +148,7 @@
           this.isHalf = false
         }
         this.hoverIndex = i
+        this.changeValue(i)
       },
       starHalfMousemove (i) {
         if (this.disabled) return
@@ -151,6 +156,12 @@
           this.isHalf = true
         }
         this.hoverIndex = i
+        this.changeValue(i)
+      },
+      changeValue (i) {
+        if (!this.hoverChange) return
+        let value = this.isHalf ? i - 0.5 : i
+        this.$emit('input', value)
       },
       starClick (i) {
         if (this.disabled) return
@@ -168,6 +179,8 @@
         if (this.disabled) return
         this.hoverIndex = -1
         this.isHalf = this.starHalf && this.currentValue.toString().split('.').length > 1
+        if (!this.hoverChange) return
+        this.$emit('input', this.currentValue)
       }
     }
   }

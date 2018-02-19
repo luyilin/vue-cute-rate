@@ -13,9 +13,13 @@
     <star-rate active-color="#42b983" :value="1">
       <span slot="rateChar" slot-scope="props" :class="props.computeClass">V</span>
     </star-rate>
-    <star-rate :value="4" :allow-clear="false"/>
-    <star-rate v-model="value" type="star1"/>
+    <star-rate :value="3" :allow-clear="false"/>
+
+    <star-rate v-model="value" type="star1"
+               :star-half="true"
+               :hover-change="true"/>
     <span class="text">{{ value }} stars</span>
+
     <star-rate :value="3"
                class="rate-1" :style="{'margin': 20 + 'px'}"
                inactive-color="#ccc" hover-color="lightblue"/>
@@ -29,13 +33,14 @@
       <span slot="inactiveRate" slot-scope="props"
             :class="props.computeClass">🍭</span>
     </star-rate>
-    <star-rate v-model="dogValue" inactive-char="-">
+    <star-rate v-model="dogValue" inactive-char="-"
+               :hover-change="true">
       <img slot="inactiveRate" slot-scope="props"
            :class="props.computeClass"
            class="dog"
            src="https://user-images.githubusercontent.com/12069729/36364686-84f49ada-1580-11e8-9bc9-4549c5d066d3.png">
     </star-rate>
-    <span class="text">{{ dogValue + ' lovely' + (dogValue > 1 ? ' puppies' : ' puppy') }}</span>
+    <span class="text">{{ dogValue + ' lovely ' + (dogValue > 1 ? 'puppies' : 'puppy') }}</span>
   </div>
 </template>
 
@@ -49,7 +54,7 @@ export default {
 
   data () {
     return {
-      value: 3,
+      value: 3.5,
       trueValue: 3,
       dogValue: 2
     }
