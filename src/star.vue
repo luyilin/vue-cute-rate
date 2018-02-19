@@ -7,14 +7,27 @@
          v-for="i in count" :key="i"
          @mousemove="starMousemove(i)"
          @click="starClick(i)">
-      <i class="char iconfont icon-rate-1" :class="computeFullTypeCls(i)"
-         v-if="!otherRateChar"/>
-      <slot name="rateChar" :computeClass="computeFullCls(i, 'char')"/>
-      <span class="star-half" @mousemove.stop="starHalfMousemove(i)">
-        <i class="char iconfont icon-rate-2" :class="computeHalfTypeCls(i)"
+      <div v-if="inactiveChar.length">
+        <slot name="inactiveRate"
+              v-if="i <= currentIndex()"
+              computeClass="char"/>
+        <span class="char" v-else>{{ inactiveChar }}</span>
+      </div>
+      <div v-else>
+        <i class="char iconfont icon-rate-1"
+           :class="computeFullTypeCls(i)"
            v-if="!otherRateChar"/>
-        <slot name="rateChar" :computeClass="computeHalfCls(i, 'char')"/>
-      </span>
+        <slot name="rateChar"
+              :computeClass="computeFullCls(i, 'char')"/>
+        <span class="star-half"
+              @mousemove.stop="starHalfMousemove(i)">
+          <i class="char iconfont icon-rate-2"
+             :class="computeHalfTypeCls(i)"
+             v-if="!otherRateChar"/>
+          <slot name="rateChar"
+                :computeClass="computeHalfCls(i, 'char')"/>
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -60,6 +73,10 @@
         type: String,
         default: ''
       },
+      inactiveChar: {
+        type: String,
+        default: ''
+      }
     },
 
     data () {
@@ -213,5 +230,8 @@
   }
   .icon-full, .icon-half {
     color: var(--active-color);
+  }
+  .star-char {
+    padding: 5px;
   }
 </style>
