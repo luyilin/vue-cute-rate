@@ -10,31 +10,31 @@
       </h2>
       <div class="example">
         <div class="left">
-          <kokk root="./docs/" doc="basic.md"
+          <kokk root="/docs/" doc="basic.md"
                 :expandAll="expandAll">
             <star-rate slot="demo"/>
           </kokk>
-          <kokk root="./docs/" doc="copywriting.md"
+          <kokk root="/docs/" doc="copywriting.md"
                 :expandAll="expandAll"
                 title="Show copywriting" desc="Add copywriting in rate components.">
             <star-rate slot="demo" v-model="value"
                        type="star1"/>
             <span slot="demo" class="text">{{ value }} stars</span>
           </kokk>
-          <kokk root="./docs/" doc="clear.md"
+          <kokk root="/docs/" doc="clear.md"
                 :expandAll="expandAll"
                 title="Clear star" desc="Support set allow to clear star when click again.">
             <star-rate slot="demo" :value="3" :allow-clear="false"/>
             <span slot="demo" class="text">allowClear: false</span>
           </kokk>
-          <kokk root="./docs/" doc="color.md"
+          <kokk root="/docs/" doc="color.md"
                 :expandAll="expandAll"
                 title="Custom color" desc="Set the active inactive or hover color to custom color.">
             <star-rate slot="demo" :value="3"
                        active-color="lightpink" inactive-color="#ccc"
                        hover-color="lightblue"/>
           </kokk>
-          <kokk root="./docs/" doc="inactiveChar.md"
+          <kokk root="/docs/" doc="inactiveChar.md"
                 :expandAll="expandAll"
                 title="Custom inactive character"
                 desc="Replace the default star to other character like image, Unicode, or anything which cannot be controled by color.
@@ -58,20 +58,20 @@ At the same time, you may need set the inactive character.">
           </kokk>
         </div>
         <div class="right">
-          <kokk root="./docs/" doc="half.md"
+          <kokk root="/docs/" doc="half.md"
                 :expandAll="expandAll"
                 title="Half star" desc="Support select half star.">
             <star-rate slot="demo" :value="2.5" type="star1"
                        :star-half="true"/>
           </kokk>
-          <kokk root="./docs/" doc="disabled.md"
+          <kokk root="/docs/" doc="disabled.md"
                 :expandAll="expandAll"
                 title="Read only" desc="Read only, can't use mouse to interact.">
             <star-rate slot="demo" :value="2" :disabled="true"
                        active-color="#d4237a"
                        type="heart"/>
           </kokk>
-          <kokk root="./docs/" doc="hover.md"
+          <kokk root="/docs/" doc="hover.md"
                 :expandAll="expandAll"
                 title="Hover change" desc="Support set hover-change to change value when hover.">
             <star-rate slot="demo" v-model="value1"
@@ -79,7 +79,7 @@ At the same time, you may need set the inactive character.">
                        :hover-change="true"/>
             <span slot="demo" class="text">{{ value1 }} stars</span>
           </kokk>
-          <kokk root="./docs/" doc="type.md"
+          <kokk root="/docs/" doc="type.md"
                 :expandAll="expandAll"
                 title="Icon type" desc="Support 3 cute types of iconfont by default.">
             <star-rate slot="demo" :value="3"/>
@@ -94,7 +94,7 @@ At the same time, you may need set the inactive character.">
                        type="heart"/>
             <span slot="demo" class="text">heart</span>
           </kokk>
-          <kokk root="./docs/" doc="char.md"
+          <kokk root="/docs/" doc="char.md"
                 :expandAll="expandAll"
                 title="Other character"
                 desc="Replace the default star to other character like alphabet, digit, iconfont or anything which can be controled by color.">
