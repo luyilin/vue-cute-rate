@@ -1,0 +1,36 @@
+```vue
+<template>
+ <star-rate v-model="trueValue"
+            inactive-char="❌">
+   <span slot="inactiveRate" slot-scope="props"
+   :class="props.computeClass">✔️</span>
+ </star-rate>
+ <span class="text">{{ trueValue }} true</span>
+ <span class="text">{{ 5 - trueValue }} false</span>
+ <br>
+ <star-rate v-model="puppyValue"
+            inactive-char="-" :hover-change="true">
+   <img slot="inactiveRate" slot-scope="props"
+        :class="props.computeClass"
+        class="dog"
+        src="https://user-images.githubusercontent.com/12069729/36364686-84f49ada-1580-11e8-9bc9-4549c5d066d3.png">
+ </star-rate>
+ <span class="text">{{ puppyValue + ' lovely ' + (puppyValue > 1 ? 'puppies' : 'puppy') }}</span> 
+</template>
+
+<script>
+import StarRate from 'vue-cute-rate'
+
+export default {
+  components: {
+    StarRate
+  },
+  data () {
+    return {
+      trueValue: 3,
+      puppyValue: 2
+    }
+  }
+}
+</script>
+```
