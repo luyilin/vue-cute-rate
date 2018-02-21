@@ -22,6 +22,12 @@
     "name": "luyilin",
     "email": "luyilin12@gmail.com"
   },
+  "keywords": [
+    "rate",
+    "vue-rate",
+    "vue-star",
+    "vue-cute-rate"
+  ],
   "license": "MIT",
   "eslintConfig": {
     "extends": [
@@ -49,7 +55,7 @@
     "vue-test-utils": "^1.0.0-beta.9"
   },
   "dependencies": {
-    "kokk": "0.0.3",
+    "kokk": "^0.0.4",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "vue-style-loader": "^3.1.2"

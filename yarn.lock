@@ -4547,16 +4547,16 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
-kokk@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/kokk/-/kokk-0.0.3.tgz#bbf9addf5feb71c1be854daa3e1f72a597ed93b1"
+kokk@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/kokk/-/kokk-0.0.4.tgz#b4e36a778c29781a071dda13cffd9921741649a4"
   dependencies:
     marked3 "^0.5.2"
     node-sass "^4.7.2"
     prismjs "^1.11.0"
     sass-loader "^6.0.6"
     unfetch "^3.0.0"
-    vue-cute-rate "^0.0.3"
+    vue-cute-rate "^0.0.4"
     vue-style-loader "^4.0.2"
 
 latest-version@^3.0.0:
@@ -7861,9 +7861,9 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vue-cute-rate@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/vue-cute-rate/-/vue-cute-rate-0.0.3.tgz#537213a381705b0fdd5e5f82178e1292efece8ac"
+vue-cute-rate@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/vue-cute-rate/-/vue-cute-rate-0.0.4.tgz#f9e8243ea1287e6506ceb51f2fe943fc5eb2d126"
   dependencies:
     node-sass "^4.7.2"
     sass-loader "^6.0.6"
