@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a href="https://github.com/luyilin/vue-cute-rate" target="_blank" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#f2c1d9; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+    <a href="https://github.com/luyilin/vue-cute-rate" target="_blank" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#f2c1d9; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
     <div class="main">
       <h1>vue-cute-rate</h1>
       <h2 class="title">
@@ -11,38 +11,38 @@
       <div class="example">
         <div class="left">
           <kokk root="/docs/" doc="basic.md"
-                :expandAll="expandAll">
+                :expand-all="expandAll">
             <star-rate slot="demo"/>
           </kokk>
           <kokk root="/docs/" doc="copywriting.md"
-                :expandAll="expandAll"
+                :expand-all="expandAll"
                 title="Show copywriting" desc="Add copywriting in rate components.">
             <star-rate slot="demo" v-model="value"
                        type="star1"/>
             <span slot="demo" class="text">{{ value }} stars</span>
           </kokk>
           <kokk root="/docs/" doc="clear.md"
-                :expandAll="expandAll"
+                :expand-all="expandAll"
                 title="Clear star" desc="Support set allow to clear star when click again.">
             <star-rate slot="demo" :value="3" :allow-clear="false"/>
             <span slot="demo" class="text">allowClear: false</span>
           </kokk>
           <kokk root="/docs/" doc="color.md"
-                :expandAll="expandAll"
+                :expand-all="expandAll"
                 title="Custom color" desc="Set the active inactive or hover color to custom color.">
             <star-rate slot="demo" :value="3"
                        active-color="lightpink" inactive-color="#ccc"
                        hover-color="lightblue"/>
           </kokk>
           <kokk root="/docs/" doc="inactiveChar.md"
-                :expandAll="expandAll"
+                :expand-all="expandAll"
                 title="Custom inactive character"
                 desc="Replace the default star to other character like image, Unicode, or anything which cannot be controled by color.
 At the same time, you may need set the inactive character.">
             <star-rate slot="demo" v-model="trueValue"
                        inactive-char="❌">
-            <span slot="inactiveRate" slot-scope="props"
-                  :class="props.computeClass">✔️</span>
+              <span slot="inactiveRate" slot-scope="props"
+                    :class="props.computeClass">✔️</span>
             </star-rate>
             <span slot="demo" class="text">{{ trueValue }} true</span>
             <span slot="demo" class="text">{{ 5 - trueValue }} false</span>
@@ -59,20 +59,20 @@ At the same time, you may need set the inactive character.">
         </div>
         <div class="right">
           <kokk root="/docs/" doc="half.md"
-                :expandAll="expandAll"
+                :expand-all="expandAll"
                 title="Half star" desc="Support select half star.">
             <star-rate slot="demo" :value="2.5" type="star1"
                        :star-half="true"/>
           </kokk>
           <kokk root="/docs/" doc="disabled.md"
-                :expandAll="expandAll"
+                :expand-all="expandAll"
                 title="Read only" desc="Read only, can't use mouse to interact.">
             <star-rate slot="demo" :value="2" :disabled="true"
                        active-color="#d4237a"
                        type="heart"/>
           </kokk>
           <kokk root="/docs/" doc="hover.md"
-                :expandAll="expandAll"
+                :expand-all="expandAll"
                 title="Hover change" desc="Support set hover-change to change value when hover.">
             <star-rate slot="demo" v-model="value1"
                        type="star1" :star-half="true"
@@ -80,7 +80,7 @@ At the same time, you may need set the inactive character.">
             <span slot="demo" class="text">{{ value1 }} stars</span>
           </kokk>
           <kokk root="/docs/" doc="type.md"
-                :expandAll="expandAll"
+                :expand-all="expandAll"
                 title="Icon type" desc="Support 3 cute types of iconfont by default.">
             <star-rate slot="demo" :value="3"/>
             <span slot="demo" class="text">default type star</span>
@@ -95,7 +95,7 @@ At the same time, you may need set the inactive character.">
             <span slot="demo" class="text">heart</span>
           </kokk>
           <kokk root="/docs/" doc="char.md"
-                :expandAll="expandAll"
+                :expand-all="expandAll"
                 title="Other character"
                 desc="Replace the default star to other character like alphabet, digit, iconfont or anything which can be controled by color.">
             <star-rate slot="demo" :value="3.5"

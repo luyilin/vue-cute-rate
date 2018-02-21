@@ -40,8 +40,8 @@ export default {
 | star-half | whether to allow semi selection | boolean | false |
 | disabled | read only, unable to interact | boolean | false |
 | allow-clear | whether to allow clear when click again | boolean | true |
-| type | there are 3 cute types of iconfont by default. | string | star |
-| hover-change | Support set hover-change to change value when hover.| boolean | false |
+| type | there are 3 cute types of iconfont by default | string | star |
+| hover-change | Support set hover-change to change value when hover | boolean | false |
 | active-color | color of the active values | string | #fadb14 |
 | inactive-color | color of the inactive values | string | #e9e9e9 |
 | hover-color | color when hover a value | string | same as activeColor by default |
