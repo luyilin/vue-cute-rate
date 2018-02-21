@@ -4,7 +4,7 @@
 
 Rate with star, heart, emoji or anything you like.
 
-See the beautiful [demo](https://vue-cute-rate.netlify.com/) for vue-cute-rate. Supported by [kokk](https://github.com/luyilin/kokk)
+See the beautiful [demo and usage](https://vue-cute-rate.netlify.com/example/dist/) for vue-cute-rate. Supported by [kokk](https://github.com/luyilin/kokk) 🍹
 
 ## Install
 
@@ -37,15 +37,15 @@ export default {
 | -------- | ----------- | ---- | ------- |
 | count | star count | number | 5 |
 | value | current value | number | 0 |
-| starHalf | whether to allow semi selection | boolean | false |
+| star-half | whether to allow semi selection | boolean | false |
 | disabled | read only, unable to interact | boolean | false |
-| allowClear | whether to allow clear when click again | boolean | true |
+| allow-clear | whether to allow clear when click again | boolean | true |
 | type | there are 3 cute types of iconfont by default. | string | star |
-| hoverChange | Support set hover-change to change value when hover.| boolean | false |
-| activeColor | callback when component lose focus | string | '#fadb14' |
-| inactiveColor | callback when select value | string | '#e9e9e9' |
-| hoverColor | callback when component get focus | string | same as activeColor by default |
-| inactiveChar | callback when hover item | string | - |
+| hover-change | Support set hover-change to change value when hover.| boolean | false |
+| active-color | color of the active values | string | #fadb14 |
+| inactive-color | color of the inactive values | string | #e9e9e9 |
+| hover-color | color when hover a value | string | same as activeColor by default |
+| inactive-char | the inactive character, especially needed when you use some characters like image which cannot be controled by color | string | - |
 
 ## License
 
