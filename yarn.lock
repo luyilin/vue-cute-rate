@@ -4547,9 +4547,9 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
-kokk@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/kokk/-/kokk-0.0.4.tgz#b4e36a778c29781a071dda13cffd9921741649a4"
+kokk@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/kokk/-/kokk-0.0.5.tgz#be929a74b44dc739478e17bea9932f125da91c31"
   dependencies:
     marked3 "^0.5.2"
     node-sass "^4.7.2"

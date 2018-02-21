@@ -4,7 +4,7 @@
 
 Rate with star, heart, emoji or anything you like.
 
-See the beautiful [demo and usage](https://vue-cute-rate.netlify.com/example/dist/) for vue-cute-rate. Powered by [kokk](https://github.com/luyilin/kokk) 🍹
+See the beautiful [doc](https://vue-cute-rate.netlify.com/example/dist/) for vue-cute-rate. Powered by [kokk](https://github.com/luyilin/kokk) 🍹
 
 ## Install
 
@@ -33,6 +33,8 @@ export default {
 ```
 ## API
 
+See the [doc](https://vue-cute-rate.netlify.com/example/dist/) for details.
+
 | Property | Description | type | Default |
 | -------- | ----------- | ---- | ------- |
 | count | star count | number | 5 |
@@ -40,7 +42,7 @@ export default {
 | star-half | whether to allow semi selection | boolean | false |
 | disabled | read only, unable to interact | boolean | false |
 | allow-clear | whether to allow clear when click again | boolean | true |
-| type | there are 3 cute types of iconfont by default | string | star |
+| type | there are 3 cute types of iconfont by default, star star1 and heart | string | star |
 | hover-change | Support set hover-change to change value when hover | boolean | false |
 | active-color | color of the active values | string | #fadb14 |
 | inactive-color | color of the inactive values | string | #e9e9e9 |
