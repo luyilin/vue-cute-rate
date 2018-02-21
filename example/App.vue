@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <star-rate :value="4"/>
+    <star-rate />
     <star-rate :value="2.5" type="star1"
                :star-half="true"/>
     <star-rate :value="2" :disabled="true"

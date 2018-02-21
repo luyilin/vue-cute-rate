@@ -7,7 +7,7 @@ Rate with star, heart, emoji or anything you like.
 ## Install
 
 ```bash
-yarn add vue-cute-rate
+yarn add vue-cute-rate --save
 ```
 
 CDN: [UNPKG](https://unpkg.com/vue-cute-rate/) | [jsDelivr](https://cdn.jsdelivr.net/npm/vue-cute-rate/) (available as `window.rate`)
@@ -16,7 +16,7 @@ CDN: [UNPKG](https://unpkg.com/vue-cute-rate/) | [jsDelivr](https://cdn.jsdelivr
 
 ```vue
 <template>
-  <star-rate></star-rate>
+  <star-rate/>
 </template>
 
 <script>
