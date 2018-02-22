@@ -33,4 +33,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.puppy {
+  width: 20px;
+}
+</style>
 ```

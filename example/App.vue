@@ -188,9 +188,6 @@ export default {
     margin: 0 8px;
     font-size: 14px;
   }
-  .rate-1 {
-    display: block !important;
-  }
   .puppy {
     width: 20px;
   }
