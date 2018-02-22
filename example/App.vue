@@ -91,7 +91,7 @@
                 :expand-all="expandAll"
                 title="Custom inactive character"
                 desc="Replace the default star to other character like image, Unicode, or anything which cannot be controled by color.
-At the same time, you may need set the inactive character. And make sure to use customChar as the slot name.">
+At the same time, you may want to set the inactive character. And make sure to use customChar as the slot name.">
             <star-rate slot="demo" v-model="trueValue"
                        inactive-char="❌">
               <span slot="customChar" slot-scope="props"
