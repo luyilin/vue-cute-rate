@@ -55,13 +55,13 @@ See the [doc](https://vue-cute-rate.netlify.com/example/dist/) for live demo and
 
 Use the slot when replace the default star to other character like alphabet, digit, iconfont or anything which can be controled by color.
 
-The slot name is `rateChar`, and make sure to write `slot-scope="props" :class="props.computeClass"` as well. We need Scoped Slots and compute classname by props.
+The slot name is `rateChar`, and make sure to write `slot-scope="props" :class="props.computeClass"` as well. We need Scoped Slots and compute classnames by props.
 
 #### customChar
 
 Use the slot when replace the default star to other character like image, Unicode, or anything which cannot be controled by color. At the same time, you may want to set the inactive character.
 
-The slot name is `customChar`, and make sure to write `slot-scope="props" :class="props.computeClass"` as well. We need Scoped Slots and compute classname by props.
+The slot name is `customChar`, and make sure to write `slot-scope="props" :class="props.computeClass"` as well. We need Scoped Slots and compute classnames by props.
 
 ## License
 
