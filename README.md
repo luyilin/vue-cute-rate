@@ -47,7 +47,7 @@ See the [doc](https://vue-cute-rate.netlify.com/example/dist/) for live demo and
 | active-color | color of the active values | string | #fadb14 |
 | inactive-color | color of the inactive values | string | #e9e9e9 |
 | hover-color | color when hover a value | string | same as activeColor by default |
-| inactive-char | the inactive character, especially needed when you use some characters like image which cannot be controled by color | string | - |
+| inactive-char | the inactive character, especially needed when you use some characters like image which cannot be controled by color | string | - (hyphen) |
 
 ## License
 

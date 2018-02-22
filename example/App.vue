@@ -29,7 +29,7 @@
           </kokk>
           <kokk root="/docs/" doc="color.md"
                 :expand-all="expandAll"
-                title="Custom color" desc="Set the active inactive or hover color to custom color.">
+                title="Custom color" desc="Set the active, inactive and hover color to custom color.">
             <star-rate slot="demo" :value="3"
                        active-color="lightpink" inactive-color="#ccc"
                        hover-color="lightblue"/>
@@ -37,7 +37,7 @@
           <kokk root="/docs/" doc="char.md"
                 :expand-all="expandAll"
                 title="Other character"
-                desc="Replace the default star to other character like alphabet, digit, iconfont or anything which can be controled by color. Make sure to use rateChar as the slot name, and slot-scope, bind class">
+                desc="Replace the default star to other character like alphabet, digit, iconfont or anything which can be controled by color. Make sure to use rateChar as the slot name.">
             <star-rate slot="demo" :value="3.5"
                        :star-half="true">
               <i class="iconfont icon-vip icon-slot"
@@ -91,7 +91,7 @@
                 :expand-all="expandAll"
                 title="Custom inactive character"
                 desc="Replace the default star to other character like image, Unicode, or anything which cannot be controled by color.
-At the same time, you may need set the inactive character. And make sure to use inactiveRate as the slot name, and slot-scope, bind class">
+At the same time, you may need set the inactive character. And make sure to use inactiveRate as the slot name.">
             <star-rate slot="demo" v-model="trueValue"
                        inactive-char="❌">
               <span slot="inactiveRate" slot-scope="props"
@@ -101,7 +101,7 @@ At the same time, you may need set the inactive character. And make sure to use 
             <span slot="demo" class="text">{{ 5 - trueValue }} false</span>
             <br slot="demo">
             <star-rate slot="demo" v-model="puppyValue"
-                       inactive-char="-" :hover-change="true">
+                       :hover-change="true">
               <img slot="inactiveRate" slot-scope="props"
                    :class="props.computeClass"
                    class="puppy"

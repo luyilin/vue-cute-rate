@@ -7,7 +7,7 @@
          v-for="i in count" :key="i"
          @mousemove="starMousemove(i)"
          @click="starClick(i)">
-      <div v-if="inactiveChar.length">
+      <div v-if="inactiveCharSlot">
         <slot name="inactiveRate"
               v-if="i <= currentIndex()"
               computeClass="char"/>
@@ -16,14 +16,14 @@
       <div v-else>
         <i class="char iconfont icon-rate-1"
            :class="computeFullTypeCls(i)"
-           v-if="!otherRateChar"/>
+           v-if="!rateCharSlot"/>
         <slot name="rateChar"
               :computeClass="computeFullCls(i, 'char')"/>
         <span class="star-half"
               @mousemove.stop="starHalfMousemove(i)">
           <i class="char iconfont icon-rate-2"
              :class="computeHalfTypeCls(i)"
-             v-if="!otherRateChar"/>
+             v-if="!rateCharSlot"/>
           <slot name="rateChar"
                 :computeClass="computeHalfCls(i, 'char')"/>
         </span>
@@ -75,7 +75,7 @@
       },
       inactiveChar: {
         type: String,
-        default: ''
+        default: '-'
       },
       hoverChange: {
         type: Boolean,
@@ -88,7 +88,8 @@
         hoverIndex: -1,
         currentValue: this.value,
         isHalf: this.starHalf && this.value.toString().split('.').length > 1,
-        otherRateChar: false
+        rateCharSlot: false,
+        inactiveCharSlot: false
       }
     },
 
@@ -103,7 +104,8 @@
       style.setProperty('--active-color', this.activeColor)
       style.setProperty('--inactive-color', this.inactiveColor)
       style.setProperty('--hover-color', this.hoverColor || this.activeColor)
-      this.otherRateChar = this.$scopedSlots.rateChar
+      this.rateCharSlot = this.$scopedSlots.rateChar
+      this.inactiveCharSlot = this.$scopedSlots.inactiveRate
     },
 
     methods: {
