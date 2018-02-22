@@ -37,7 +37,7 @@
           <kokk root="/docs/" doc="char.md"
                 :expand-all="expandAll"
                 title="Other character"
-                desc="Replace the default star to other character like alphabet, digit, iconfont or anything which can be controled by color.">
+                desc="Replace the default star to other character like alphabet, digit, iconfont or anything which can be controled by color. Make sure to use rateChar as the slot name, and slot-scope, bind class">
             <star-rate slot="demo" :value="3.5"
                        :star-half="true">
               <i class="iconfont icon-vip icon-slot"
@@ -66,7 +66,7 @@
           </kokk>
           <kokk root="/docs/" doc="hover.md"
                 :expand-all="expandAll"
-                title="Hover change" desc="Support set hover-change to change value when hover.">
+                title="Hover change" desc="Support set hover-change to change value when hover. Make sure to use v-model to create a two-way binding.">
             <star-rate slot="demo" v-model="value1"
                        type="star1" :star-half="true"
                        :hover-change="true"/>
@@ -91,7 +91,7 @@
                 :expand-all="expandAll"
                 title="Custom inactive character"
                 desc="Replace the default star to other character like image, Unicode, or anything which cannot be controled by color.
-At the same time, you may need set the inactive character.">
+At the same time, you may need set the inactive character. And make sure to use inactiveRate as the slot name, and slot-scope, bind class">
             <star-rate slot="demo" v-model="trueValue"
                        inactive-char="❌">
               <span slot="inactiveRate" slot-scope="props"

@@ -33,12 +33,12 @@ export default {
 ```
 ## API
 
-See the [doc](https://vue-cute-rate.netlify.com/example/dist/) for details.
+See the [doc](https://vue-cute-rate.netlify.com/example/dist/) for live demo and details.
 
 | Property | Description | type | Default |
 | -------- | ----------- | ---- | ------- |
 | count | star count | number | 5 |
-| value | current value | number | 0 |
+| value / v-model | current value | number | 0 |
 | star-half | whether to allow semi selection | boolean | false |
 | disabled | read only, unable to interact | boolean | false |
 | allow-clear | whether to allow clear when click again | boolean | true |
