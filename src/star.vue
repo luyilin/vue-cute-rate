@@ -7,8 +7,8 @@
          v-for="i in count" :key="i"
          @mousemove="starMousemove(i)"
          @click="starClick(i)">
-      <div v-if="inactiveCharSlot">
-        <slot name="inactiveRate"
+      <div v-if="customCharSlot">
+        <slot name="customChar"
               v-if="i <= currentIndex()"
               computeClass="char"/>
         <span class="char" v-else>{{ inactiveChar }}</span>
@@ -89,7 +89,7 @@
         currentValue: this.value,
         isHalf: this.starHalf && this.value.toString().split('.').length > 1,
         rateCharSlot: false,
-        inactiveCharSlot: false
+        customCharSlot: false
       }
     },
 
@@ -105,7 +105,7 @@
       style.setProperty('--inactive-color', this.inactiveColor)
       style.setProperty('--hover-color', this.hoverColor || this.activeColor)
       this.rateCharSlot = this.$scopedSlots.rateChar
-      this.inactiveCharSlot = this.$scopedSlots.inactiveRate
+      this.customCharSlot = this.$scopedSlots.customChar
     },
 
     methods: {

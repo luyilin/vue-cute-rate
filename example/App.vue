@@ -91,10 +91,10 @@
                 :expand-all="expandAll"
                 title="Custom inactive character"
                 desc="Replace the default star to other character like image, Unicode, or anything which cannot be controled by color.
-At the same time, you may need set the inactive character. And make sure to use inactiveRate as the slot name.">
+At the same time, you may need set the inactive character. And make sure to use customChar as the slot name.">
             <star-rate slot="demo" v-model="trueValue"
                        inactive-char="❌">
-              <span slot="inactiveRate" slot-scope="props"
+              <span slot="customChar" slot-scope="props"
                     :class="props.computeClass">✔️</span>
             </star-rate>
             <span slot="demo" class="text">{{ trueValue }} true</span>
@@ -102,7 +102,7 @@ At the same time, you may need set the inactive character. And make sure to use 
             <br slot="demo">
             <star-rate slot="demo" v-model="puppyValue"
                        :hover-change="true">
-              <img slot="inactiveRate" slot-scope="props"
+              <img slot="customChar" slot-scope="props"
                    :class="props.computeClass"
                    class="puppy"
                    src="https://user-images.githubusercontent.com/12069729/36364686-84f49ada-1580-11e8-9bc9-4549c5d066d3.png">

@@ -2,7 +2,7 @@
 <template>
  <star-rate v-model="trueValue"
             inactive-char="❌">
-   <span slot="inactiveRate" slot-scope="props"
+   <span slot="customChar" slot-scope="props"
    :class="props.computeClass">✔️</span>
  </star-rate>
  <span class="text">{{ trueValue }} true</span>
@@ -10,9 +10,9 @@
  <br>
  <star-rate v-model="puppyValue"
             inactive-char="-" :hover-change="true">
-   <img slot="inactiveRate" slot-scope="props"
+   <img slot="customChar" slot-scope="props"
         :class="props.computeClass"
-        class="dog"
+        class="puppy"
         src="https://user-images.githubusercontent.com/12069729/36364686-84f49ada-1580-11e8-9bc9-4549c5d066d3.png">
  </star-rate>
  <span class="text">{{ puppyValue + ' lovely ' + (puppyValue > 1 ? 'puppies' : 'puppy') }}</span> 
