@@ -4547,6 +4547,21 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
+kokk@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/kokk/-/kokk-0.0.11.tgz#c07ae4201cb7df98b9f94572a0a3910460bc2f7d"
+  dependencies:
+    marked3 "^0.5.2"
+    node-sass "^4.7.2"
+    prismjs "^1.11.0"
+    sass-loader "^6.0.6"
+    slugo "^0.2.1"
+    unfetch "^3.0.0"
+    vue-affix "^0.2.4"
+    vue-cute-loading "^0.0.2"
+    vue-cute-rate "^0.0.6"
+    vue-style-loader "^4.0.2"
+
 kokk@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/kokk/-/kokk-0.0.5.tgz#be929a74b44dc739478e17bea9932f125da91c31"
@@ -7861,10 +7876,31 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
+vue-affix@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/vue-affix/-/vue-affix-0.2.4.tgz#4f599f10517cab95a2d628029f91edb83316afe7"
+
+vue-cute-loading@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/vue-cute-loading/-/vue-cute-loading-0.0.2.tgz#950f45df187ea6fcdbbbfcc132a2cd044f9a510e"
+  dependencies:
+    node-sass "^4.7.2"
+    sass-loader "^6.0.6"
+    vue-style-loader "^4.0.2"
+
 vue-cute-rate@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/vue-cute-rate/-/vue-cute-rate-0.0.4.tgz#f9e8243ea1287e6506ceb51f2fe943fc5eb2d126"
   dependencies:
+    node-sass "^4.7.2"
+    sass-loader "^6.0.6"
+    vue-style-loader "^3.1.2"
+
+vue-cute-rate@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/vue-cute-rate/-/vue-cute-rate-0.0.6.tgz#24d5abdd60d8dbc734aa40bb0cbcbf5a5f9bf781"
+  dependencies:
+    kokk "^0.0.5"
     node-sass "^4.7.2"
     sass-loader "^6.0.6"
     vue-style-loader "^3.1.2"

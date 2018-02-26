@@ -1,8 +1,7 @@
 ```vue
 <template>
   <star-rate v-model="value" type="star1"
-             :star-half="true"
-             :hover-change="true"/>
+             :star-half="true">
   <span class="text">{{ value }} stars</span>
 </template>
 
