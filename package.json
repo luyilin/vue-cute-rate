@@ -1,6 +1,6 @@
 {
   "name": "vue-cute-rate",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Rate with star, heart, emoji or anything you like.",
   "repository": {
     "url": "luyilin/vue-cute-rate",
@@ -55,7 +55,7 @@
     "vue-test-utils": "^1.0.0-beta.9"
   },
   "dependencies": {
-    "kokk": "^0.0.11",
+    "kokk": "^0.0.14",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "vue-style-loader": "^3.1.2"
