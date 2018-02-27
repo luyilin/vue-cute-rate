@@ -15,3 +15,14 @@ export default {
 }
 </script>
 ```
+<!-- title-start -->
+
+title: Read only
+
+<!-- title-stop -->
+
+<!-- desc-start -->
+
+desc: Read only, cannot use mouse to interact.
+
+<!-- desc-stop -->

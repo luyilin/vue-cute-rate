@@ -23,3 +23,15 @@ export default {
 }
 </script>
 ```
+
+<!-- title-start -->
+
+title: Icon type
+
+<!-- title-stop -->
+
+<!-- desc-start -->
+
+desc: Support 3 cute types of iconfont by default.
+
+<!-- desc-stop -->

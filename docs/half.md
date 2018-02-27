@@ -14,3 +14,14 @@ export default {
 }
 </script>
 ```
+<!-- title-start -->
+
+title: Half star
+
+<!-- title-stop -->
+
+<!-- desc-start -->
+
+desc: Support select half star.
+
+<!-- desc-stop -->

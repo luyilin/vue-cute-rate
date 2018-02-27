@@ -15,3 +15,14 @@ export default {
 }
 </script>
 ```
+<!-- title-start -->
+
+title: Custom color
+
+<!-- title-stop -->
+
+<!-- desc-start -->
+
+desc: Set the active, inactive and hover color to custom color.
+
+<!-- desc-stop -->

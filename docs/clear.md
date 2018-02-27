@@ -13,3 +13,14 @@ export default {
 }
 </script>
 ```
+<!-- title-start -->
+
+title: Clear star
+
+<!-- title-stop -->
+
+<!-- desc-start -->
+
+desc: Support set allow to clear star when click again.
+
+<!-- desc-stop -->

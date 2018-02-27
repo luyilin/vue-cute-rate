@@ -1,7 +1,6 @@
 ```vue
 <template>
-  <star-rate v-model="value" type="star1"
-             :star-half="true">
+  <star-rate v-model="value" type="star1">
   <span class="text">{{ value }} stars</span>
 </template>
 
@@ -20,3 +19,14 @@ export default {
 }
 </script>
 ```
+<!-- title-start -->
+
+title: Show copywriting
+
+<!-- title-stop -->
+
+<!-- desc-start -->
+
+desc: Add copywriting in rate components.
+
+<!-- desc-stop -->
