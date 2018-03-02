@@ -1,7 +1,8 @@
 ```vue
 <template>
   <star-rate :value="2.5" type="star1"
-             :star-half="true"/>
+             :star-half="true"
+             :on-change="onChangeFn"/>
 </template>
 
 <script>

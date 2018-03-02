@@ -7,7 +7,8 @@
       <star-rate slot="demo-0"/>
 
       <star-rate slot="demo-1" :value="2.5" type="star1"
-                 :star-half="true"/>
+                 :star-half="true"
+                 :on-change="onChangeFn"/>
 
       <star-rate slot="demo-2" v-model="value"
                  type="star1"/>
@@ -22,7 +23,8 @@
 
       <star-rate slot="demo-5" v-model="value1"
                  type="star1" :star-half="true"
-                 :hover-change="true"/>
+                 :hover-change="true"
+                 :on-hover-change="onHoverChangeFn"/>
       <span slot="demo-5" class="text">{{ value1 }} stars</span>
 
       <star-rate slot="demo-6" :value="3"
@@ -90,6 +92,15 @@ export default {
       trueValue: 3,
       puppyValue: 2,
       expandAll: false
+    }
+  },
+
+  methods: {
+    onHoverChangeFn (value) {
+      console.log(value)
+    },
+    onChangeFn (value) {
+      console.log(value)
     }
   }
 }

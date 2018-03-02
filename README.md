@@ -33,6 +33,8 @@ See the [doc](https://vue-cute-rate.netlify.com/example/dist/) for live demo and
 | inactive-color | color of the inactive values | string | #e9e9e9 |
 | hover-color | color when hover a value | string | same as activeColor by default |
 | inactive-char | the inactive character, only rendered when use a customChar slot | string | - (hyphen) |
+| on-hover-change | callback when hover item | Function(value: number) | - |
+| on-change | callback when select value | Function(value: number) | - |
 
 ### slot
 

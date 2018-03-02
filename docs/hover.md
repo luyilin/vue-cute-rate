@@ -2,7 +2,8 @@
 <template>
   <star-rate v-model="value1"
              type="star1" :star-half="true"
-             :hover-change="true"/>
+             :hover-change="true"
+             :on-hover-change="onHoverChangeFn"/>
   <span class="text">{{ value1 }} stars</span>
 </template>
 

@@ -5,7 +5,7 @@
     <input type="hidden" :value="currentValue">
     <div class="star-full"
          v-for="i in count" :key="i"
-         @mousemove="starMousemove(i)"
+         @mouseover="starMousemove(i)"
          @click="starClick(i)">
       <div v-if="customCharSlot">
         <slot name="customChar"
@@ -20,7 +20,7 @@
         <slot name="rateChar"
               :computeClass="computeFullCls(i, 'char')"/>
         <span class="star-half"
-              @mousemove.stop="starHalfMousemove(i)">
+              @mouseover.stop="starHalfMousemove(i)">
           <i class="char iconfont icon-rate-2"
              :class="computeHalfTypeCls(i)"
              v-if="!rateCharSlot"/>
@@ -80,6 +80,14 @@
       hoverChange: {
         type: Boolean,
         default: false
+      },
+      onHoverChange: {
+        type: Function,
+        default: () => {}
+      },
+      onChange: {
+        type: Function,
+        default: () => {}
       }
     },
 
@@ -161,9 +169,13 @@
         this.changeValue(i)
       },
       changeValue (i) {
-        if (!this.hoverChange) return
-        let value = this.isHalf ? i - 0.5 : i
-        this.$emit('input', value)
+        if (this.hoverChange) {
+          let value = this.isHalf ? i - 0.5 : i
+          this.$emit('input', value)
+          this.onHoverChange(value)
+        } else {
+          this.onHoverChange(this.value)
+        }
       },
       starClick (i) {
         if (this.disabled) return
@@ -176,6 +188,7 @@
           value = 0
         }
         this.$emit('input', value)
+        this.onChange(value)
       },
       starMouseleave () {
         if (this.disabled) return
