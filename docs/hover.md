@@ -18,6 +18,11 @@ export default {
     return {
       value1: 3.5
     }
+  },
+  methods: {
+    onHoverChangeFn (value) {
+      console.log(value)
+    }
   }
 }
 </script>

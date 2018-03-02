@@ -11,6 +11,11 @@ import StarRate from 'vue-cute-rate'
 export default {
   components: {
     StarRate
+  },
+  methods: {
+    onChangeFn (value) {
+      console.log(value)
+    }
   }
 }
 </script>
