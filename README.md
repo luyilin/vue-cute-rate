@@ -4,7 +4,7 @@
 
 Rate with star, heart, emoji or anything you like.
 
-See the beautiful [doc](https://vue-cute-rate.netlify.com/example/dist/) for vue-cute-rate. Powered by [kokk](https://github.com/luyilin/kokk) 🍹
+See the beautiful [doc](https://vue-cute-rate.netlify.com) for vue-cute-rate. Powered by [kokk](https://github.com/luyilin/kokk) 🍹
 
 ## Install
 
@@ -18,7 +18,7 @@ CDN: [UNPKG](https://unpkg.com/vue-cute-rate/) | [jsDelivr](https://cdn.jsdelivr
 
 ## API
 
-See the [doc](https://vue-cute-rate.netlify.com/example/dist/) for live demo and details.
+See the [doc](https://vue-cute-rate.netlify.com) for live demo and details.
 
 | Property | Description | type | Default |
 | -------- | ----------- | ---- | ------- |
