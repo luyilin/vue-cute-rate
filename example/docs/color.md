@@ -1,3 +1,8 @@
+---
+title: Custom color
+desc: Set the active, inactive and hover color to custom color.
+---
+
 ```vue
 <template>
   <star-rate :value="3"
@@ -15,14 +20,3 @@ export default {
 }
 </script>
 ```
-<!-- title-start -->
-
-title: Custom color
-
-<!-- title-stop -->
-
-<!-- desc-start -->
-
-desc: Set the active, inactive and hover color to custom color.
-
-<!-- desc-stop -->

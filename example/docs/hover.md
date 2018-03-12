@@ -1,3 +1,8 @@
+---
+title: Hover change
+desc: Support set hover-change to change value when hover. Make sure to use v-model to create a two-way binding.
+---
+
 ```vue
 <template>
   <star-rate v-model="value1"
@@ -27,14 +32,3 @@ export default {
 }
 </script>
 ```
-<!-- title-start -->
-
-title: Hover change
-
-<!-- title-stop -->
-
-<!-- desc-start -->
-
-desc: Support set hover-change to change value when hover. Make sure to use v-model to create a two-way binding.
-
-<!-- desc-stop -->

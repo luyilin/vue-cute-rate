@@ -1,6 +1,11 @@
+---
+title: Basic
+desc: The simplest usage.
+---
+
 ```vue
 <template>
-  <star-rate/>
+  <star-rate :value="3"/>
 </template>
 
 <script>
@@ -13,15 +18,3 @@ export default {
 }
 </script>
 ```
-
-<!-- title-start -->
-
-title: Basic 
-
-<!-- title-stop -->
-
-<!-- desc-start -->
-
-desc: The simplest usage.
-
-<!-- desc-stop -->

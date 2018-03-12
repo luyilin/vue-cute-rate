@@ -8,7 +8,7 @@ See the beautiful [doc](https://vue-cute-rate.netlify.com/example/dist/) for vue
 
 ## Install
 
-```bash
+```
 yarn add vue-cute-rate --save
 ```
 

@@ -1,3 +1,8 @@
+---
+title: Icon type
+desc: Support 3 cute types of iconfont by default.
+---
+
 ```vue
 <template>
   <star-rate :value="3"/>
@@ -23,15 +28,3 @@ export default {
 }
 </script>
 ```
-
-<!-- title-start -->
-
-title: Icon type
-
-<!-- title-stop -->
-
-<!-- desc-start -->
-
-desc: Support 3 cute types of iconfont by default.
-
-<!-- desc-stop -->

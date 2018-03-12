@@ -1,3 +1,8 @@
+---
+title: Half star
+desc: Support select half star.
+---
+
 ```vue
 <template>
   <star-rate :value="2.5" type="star1"
@@ -20,14 +25,3 @@ export default {
 }
 </script>
 ```
-<!-- title-start -->
-
-title: Half star
-
-<!-- title-stop -->
-
-<!-- desc-start -->
-
-desc: Support select half star.
-
-<!-- desc-stop -->

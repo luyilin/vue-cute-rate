@@ -1,3 +1,8 @@
+---
+title: Other character
+desc: Replace the default star to other character like alphabet, digit, iconfont or anything which can be controled by color. Make sure to use rateChar as the slot name.
+---
+
 ```vue
 <template>
   <star-rate :value="3.5"
@@ -20,14 +25,3 @@ export default {
 }
 </script>
 ```
-<!-- title-start -->
-
-title: Other character
-
-<!-- title-stop -->
-
-<!-- desc-start -->
-
-desc: Replace the default star to other character like alphabet, digit, iconfont or anything which can be controled by color. Make sure to use rateChar as the slot name.
-
-<!-- desc-stop -->

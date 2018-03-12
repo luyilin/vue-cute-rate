@@ -1,3 +1,8 @@
+---
+title: Show copywriting
+desc: Add copywriting in rate components.
+---
+
 ```vue
 <template>
   <star-rate v-model="value" type="star1">
@@ -19,14 +24,3 @@ export default {
 }
 </script>
 ```
-<!-- title-start -->
-
-title: Show copywriting
-
-<!-- title-stop -->
-
-<!-- desc-start -->
-
-desc: Add copywriting in rate components.
-
-<!-- desc-stop -->

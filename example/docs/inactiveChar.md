@@ -1,3 +1,9 @@
+---
+title: Custom inactive character
+desc: Replace the default star to other character like image, Unicode, or anything which cannot be controled by color.
+      At the same time, you may want to set the inactive character. And make sure to use customChar as the slot name.
+---
+
 ```vue
 <template>
  <star-rate v-model="trueValue"
@@ -40,15 +46,3 @@ export default {
 }
 </style>
 ```
-<!-- title-start -->
-
-title: Custom inactive character
-
-<!-- title-stop -->
-
-<!-- desc-start -->
-
-desc: Replace the default star to other character like image, Unicode, or anything which cannot be controled by color.
-      At the same time, you may want to set the inactive character. And make sure to use customChar as the slot name.
-      
-<!-- desc-stop -->

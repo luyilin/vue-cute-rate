@@ -1,3 +1,8 @@
+---
+title: Read only
+desc: Read only, cannot use mouse to interact.
+---
+
 ```vue
 <template>
   <star-rate :value="2" :disabled="true"
@@ -15,14 +20,3 @@ export default {
 }
 </script>
 ```
-<!-- title-start -->
-
-title: Read only
-
-<!-- title-stop -->
-
-<!-- desc-start -->
-
-desc: Read only, cannot use mouse to interact.
-
-<!-- desc-stop -->
