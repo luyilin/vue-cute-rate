@@ -1,31 +1,32 @@
 <template>
-  <div class="star-main" :class="starDisable"
-       ref="cuteRate"
+  <div ref="cuteRate"
+       :class="starDisable"
+       class="star-main"
        @mouseleave="starMouseleave">
-    <input type="hidden" :value="currentValue">
-    <div class="star-full"
-         v-for="i in count" :key="i"
+    <input :value="currentValue" type="hidden">
+    <div v-for="i in count" :key="i"
+         class="star-full"
          @mouseover="starMousemove(i)"
          @click="starClick(i)">
       <div v-if="customCharSlot">
-        <slot name="customChar"
-              v-if="i <= currentIndex()"
-              computeClass="char"/>
-        <span class="char" v-else>{{ inactiveChar }}</span>
+        <slot v-if="i <= currentIndex()"
+              name="customChar"
+              computeClass="char" />
+        <span v-else class="char">{{ inactiveChar }}</span>
       </div>
       <div v-else>
-        <i class="char iconfont icon-rate-1"
+        <i v-if="!rateCharSlot"
            :class="computeFullTypeCls(i)"
-           v-if="!rateCharSlot"/>
-        <slot name="rateChar"
-              :computeClass="computeFullCls(i, 'char')"/>
+           class="char iconfont icon-rate-1" />
+        <slot :computeClass="computeFullCls(i, 'char')"
+              name="rateChar" />
         <span class="star-half"
               @mouseover.stop="starHalfMousemove(i)">
-          <i class="char iconfont icon-rate-2"
+          <i v-if="!rateCharSlot"
              :class="computeHalfTypeCls(i)"
-             v-if="!rateCharSlot"/>
-          <slot name="rateChar"
-                :computeClass="computeHalfCls(i, 'char')"/>
+             class="char iconfont icon-rate-2" />
+          <slot :computeClass="computeHalfCls(i, 'char')"
+                name="rateChar" />
         </span>
       </div>
     </div>
@@ -50,6 +51,10 @@
         default: false
       },
       disabled: {
+        type: Boolean,
+        default: false
+      },
+      disabledCursor: {
         type: Boolean,
         default: false
       },
@@ -103,7 +108,7 @@
 
     computed: {
       starDisable () {
-        return this.disabled ? 'star-disable' : 'star-able'
+        return this.disabled && this.disabledCursor ? 'star-disable' : 'star-able'
       }
     },
 
@@ -237,6 +242,7 @@
   }
   .star-able {
     .star-full {
+      cursor: default;
       &:hover {
         transform: scale(1.1);
         .icon-full, .icon-half {

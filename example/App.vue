@@ -4,9 +4,10 @@
     <juri :doc-list="docList" :expand-all="expandAll">
       <star-rate slot="demo-0"/>
 
-      <star-rate slot="demo-1" :value="2.5" type="star1"
+      <star-rate slot="demo-1" :value="2.5"
                  :star-half="true"
-                 :on-change="onChangeFn"/>
+                 :on-change="onChangeFn"
+                 type="star1" />
 
       <star-rate slot="demo-2" v-model="value"
                  type="star1"/>
@@ -20,9 +21,10 @@
       <span slot="demo-4" class="text">allowClear: false</span>
 
       <star-rate slot="demo-5" v-model="value1"
-                 type="star1" :star-half="true"
+                 :star-half="true"
                  :hover-change="true"
-                 :on-hover-change="onHoverChangeFn"/>
+                 :on-hover-change="onHoverChangeFn"
+                 type="star1" />
       <span slot="demo-5" class="text">{{ value1 }} stars</span>
 
       <star-rate slot="demo-6" :value="3"
@@ -43,11 +45,11 @@
 
       <star-rate slot="demo-8" :value="3.5"
                  :star-half="true">
-        <i class="iconfont icon-vip icon-slot"
-           slot="rateChar" slot-scope="props" :class="props.computeClass"/>
+        <i slot="rateChar" slot-scope="props" :class="props.computeClass"
+           class="iconfont icon-vip icon-slot" />
       </star-rate>
       <br slot="demo-8">
-      <star-rate slot="demo-8" active-color="#42b983" :value="1">
+      <star-rate slot="demo-8" :value="1" active-color="#42b983">
         <span slot="rateChar" slot-scope="props" :class="props.computeClass">V</span>
       </star-rate>
 
@@ -61,7 +63,8 @@
         <span class="text">{{ 5 - trueValue }} false</span>
         <br>
         <star-rate v-model="puppyValue"
-                   inactive-char="-" :hover-change="true">
+                   :hover-change="true"
+                   inactive-char="-">
           <img slot="customChar" slot-scope="props"
                :class="props.computeClass"
                class="puppy"

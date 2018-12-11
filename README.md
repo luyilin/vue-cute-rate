@@ -26,9 +26,10 @@ See the [doc](https://vue-cute-rate.netlify.com) for live demo and details.
 | value / v-model | current value | number | 0 |
 | star-half | whether to allow semi selection | boolean | false |
 | disabled | read only, unable to interact | boolean | false |
+| disabled-cursor | set mouse cursor to not-allowed when hover a read only element | boolean | false |
 | allow-clear | whether to allow clear when click again | boolean | true |
 | type | there are 3 cute types of iconfont by default, star star1 and heart | string | star |
-| hover-change | Support set hover-change to change value when hover | boolean | false |
+| hover-change | support set hover-change to change value when hover | boolean | false |
 | active-color | color of the active values | string | #fadb14 |
 | inactive-color | color of the inactive values | string | #e9e9e9 |
 | hover-color | color when hover a value | string | same as activeColor by default |
