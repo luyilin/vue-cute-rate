@@ -108,7 +108,11 @@
 
     computed: {
       starDisable () {
-        return this.disabled && this.disabledCursor ? 'star-disable' : 'star-able'
+        return this.disabled && this.disabledCursor
+          ? 'star-disable'
+          : this.disabled && !this.disabledCursor
+            ? 'star-disable-default'
+            : 'star-able'
       }
     },
 
@@ -233,6 +237,14 @@
       }
     }
   }
+  .star-disable-default {
+    .star-full {
+      cursor: default;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
   .star-full {
     position: relative;
     display: inline-block;
@@ -242,7 +254,6 @@
   }
   .star-able {
     .star-full {
-      cursor: default;
       &:hover {
         transform: scale(1.1);
         .icon-full, .icon-half {
