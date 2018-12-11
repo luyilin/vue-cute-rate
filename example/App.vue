@@ -72,6 +72,10 @@
         </star-rate>
         <span class="text">{{ puppyValue + ' lovely ' + (puppyValue > 1 ? 'puppies' : 'puppy') }}</span>
       </div>
+
+      <star-rate slot="demo-10" :value="3"
+                 :star-half="true"
+                 font-size="30px" />
     </juri>
   </div>
 </template>
@@ -89,6 +93,7 @@ import color from 'raw-loader!./docs/color.md'
 import type from 'raw-loader!./docs/type.md'
 import char from 'raw-loader!./docs/char.md'
 import inactiveChar from 'raw-loader!./docs/inactiveChar.md'
+import fontSize from 'raw-loader!./docs/fontSize.md'
 
 export default {
   components: {
@@ -109,7 +114,7 @@ export default {
       value1: 3.5,
       trueValue: 3,
       puppyValue: 2,
-      docList: [basic, half, copywriting, disabled, clear, hover, color, type, char, inactiveChar]
+      docList: [basic, half, copywriting, disabled, clear, hover, color, type, char, inactiveChar, fontSize]
     }
   },
 

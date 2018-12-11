@@ -1,11 +1,13 @@
 ---
-title: Basic
-desc: The simplest usage.
+title: Font size
+desc: Set the font size of character.
 ---
 
 ```vue
 <template>
-  <star-rate />
+  <star-rate :value="3"
+             :star-half="true"
+             font-size="30px" />
 </template>
 
 <script>

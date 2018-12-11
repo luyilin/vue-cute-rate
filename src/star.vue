@@ -66,6 +66,10 @@
         type: Boolean,
         default: true
       },
+      fontSize: {
+        type: String,
+        default: '22px'
+      },
       activeColor: {
         type: String,
         default: '#fadb14'
@@ -121,6 +125,7 @@
       style.setProperty('--active-color', this.activeColor)
       style.setProperty('--inactive-color', this.inactiveColor)
       style.setProperty('--hover-color', this.hoverColor || this.activeColor)
+      style.setProperty('--font-size', this.fontSize)
       this.rateCharSlot = this.$scopedSlots.rateChar
       this.customCharSlot = this.$scopedSlots.customChar
     },
@@ -226,7 +231,7 @@
   }
   .char {
     color: var(--inactive-color);
-    font-size: 22px;
+    font-size: var(--font-size);
     transition: all 0.3s ease-in-out;
   }
   .star-disable {
